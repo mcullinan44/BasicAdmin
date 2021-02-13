@@ -1,0 +1,10 @@
+<mat-sidenav-container class="custom-sidenav-container" position="start">
+        <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+                     (closed)="events.push('close!')">
+          Sidenav content
+        </mat-sidenav>
+        <mat-sidenav-content color="primary">
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+</mat-sidenav-container>
+      

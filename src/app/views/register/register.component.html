@@ -1,0 +1,38 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <mat-card-title>Register</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="registerForm">
+            <table>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Email" [(ngModel)]="email" formControlName="email" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                        <td>
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Password" [(ngModel)]="password" type="password" formControlName="password" required>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Confirm Password" [(ngModel)]="confirmPassword" type="password" formControlName="confirmPassword" required>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+            </table>
+        </form>
+        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button (click)="onSubmit()" color="primary">Register</button>
+    </mat-card-actions>
+</mat-card>
+<alert></alert>
+      
